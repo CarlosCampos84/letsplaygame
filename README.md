@@ -50,12 +50,15 @@ LetsPlayGame/
 │   │   │   ├── login.html             # Corrigido com CSRF e validação
 │   │   │   └── dashboard.html         # Corrigido e seguro (POST protegido)
 │   │   └── application.properties     # Configurações padrão
-│
+│   └── test/java/com/example/letsplaygame/LetsPlayGameApplicationTests.java
+|
 ├── build.gradle                       # Gradle com dependências do Spring Boot
 ├── gradlew / gradlew.bat              # Wrappers do Gradle
+├── .gitignore / .gitattributes
 ├── HELP.md                            # Ajuda padrão do Spring Boot
 ├── settings.gradle
-└── repositorio_git.txt                # Link de backup do repositório GitHub
+├── repositorio_git.txt                # Link de backup do repositório GitHub
+└── LetsPlayGame__Java_Advanced_2TDS_2025.md   ← README principal
 
 ```
 
