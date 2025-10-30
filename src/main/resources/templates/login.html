@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${pageTitle}">Login</title>
+</head>
+<body>
+<h1 th:text="${pageTitle}">Tela de Login</h1>
+<p th:text="${loginMessage}">Bem-vindo!</p>
+
+<form method="post" th:action="@{/login}">
+    <label for="username">Usuário</label>
+    <input id="username" name="username" type="text" required>
+
+    <label for="password">Senha</label>
+    <input id="password" name="password" type="password" required>
+
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+    <button type="submit">Entrar</button>
+</form>
+
+<!-- só mostra se já estiver autenticado -->
+<p sec:authorize="isAuthenticated()">
+    <a th:href="@{/}">Voltar ao painel</a>
+</p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${pageTitle}">Dashboard</title>
+</head>
+<body>
+<h1 th:text="${pageTitle}">Dashboard</h1>
+
+<p>Agora é: <strong th:text="${now}">2025-10-30T10:00</strong></p>
+
+<ul>
+    <li th:each="item : ${itens}" th:text="${item}">Item</li>
+</ul>
+
+<div th:if="${message}" th:text="${message}"></div>
+
+<form method="post" th:action="@{/do-something}">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+    <button type="submit">Executar ação (POST)</button>
+</form>
+
+<hr/>
+
+<!-- anônimo: mostra link para login -->
+<p sec:authorize="isAnonymous()">
+    <a th:href="@{/login}">Login</a>
+</p>
+
+<!-- autenticado: mostra botão de logout -->
+<form sec:authorize="isAuthenticated()" th:action="@{/logout}" method="post" style="display:inline;">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+    <button type="submit">Logout</button>
+</form>
+</body>
+</html>
