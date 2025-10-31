@@ -6,8 +6,8 @@ Atividade prática da disciplina Java Advanced, com o objetivo de corrigir erros
 
 ## 👥 Integrantes do Grupo
 
-Caio Henrique – RM: 554600
-Carlos Eduardo – RM: 555223
+Caio Henrique – RM: 554600 |
+Carlos Eduardo – RM: 555223 |
 Antônio Lino – RM: 554518
 
 ## 🎯 Objetivo 
