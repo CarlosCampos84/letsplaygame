@@ -168,6 +168,12 @@ public class SecurityConfig {
 5. Acesse / novamente — é redirecionado ao login (autenticação exigida).
 
 
+## 📄 Documentação
+
+O enunciado original do desafio está disponível neste PDF:  
+[📘 Clique para visualizar o arquivo atividade_texto_01 (2) 1.pdf](https://github.com/CarlosCampos84/letsplaygame/blob/main/docs/atividade_texto_01%20(2)%201.pdf)
+
+
 ## 📦 Entrega
 
 - Arquivo ZIP: pasta LetsPlayGame (sem build/, .idea/, .gradle/).
